@@ -1,0 +1,33 @@
+<div>
+<header id="header" class="fixed-top bg-dark">
+      <h1 class="ml-5"><a href="/" style="font-size:x-large;color:black;text-decoration:none;">Harichandra Kishor</a></h1>
+      <a class="btn btn-sm btn-outline-danger" style="position: fixed;right:60px;top:15px" href="/admin/logout">Logout</a>
+</header><!-- End Header -->
+</div>
+<div style="margin-top: 54px; ">
+{{#if data}}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">Name</th>
+      <th scope="col">Message</th>
+      <th scope="col">Subject</th>
+       <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr>
+      <th scope="row">1</th>
+      <td><a style="text-decoration: none;color:black" href="#">{{this.name}}</a></td>
+      <td>{{this.message}}</td>
+      <td>{{this.subject}}</td>
+      <td>{{this.email}}</td>      
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{/if}}
+</div>
+ 
